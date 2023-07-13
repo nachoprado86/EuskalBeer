@@ -129,5 +129,6 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# base de datos
-db 
+# Carpeta de base de datos
+db
+Graphic
