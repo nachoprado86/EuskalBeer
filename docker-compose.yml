@@ -13,10 +13,12 @@ services:
       - ${DB_PORT}:3306
     volumes:
       - ./db:/var/lib/mysql
-      - ./mysql/musicos_structure.sql:/docker-entrypoint-initdb.d/1musicos_structure.sql
-      - ./mysql/musicos_data.sql:/docker-entrypoint-initdb.d/2musicos_data.sql
+      - ./mysql/beer_structure.sql:/docker-entrypoint-initdb.d/1_beer_structure.sql
+      - ./mysql/beer_data.sql:/docker-entrypoint-initdb.d/2_beer_data.sql
     networks:
       - app-network
+    restart: always
+
   app:
     build: .
     container_name: ${APP_HOST}
@@ -29,6 +31,7 @@ services:
       - mysql
     networks:
       - app-network
+    restart: always
   
 networks:
   app-network:
