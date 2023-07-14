@@ -5,6 +5,6 @@ const app =  Express();
 
 app.use ("/", router);
 
-app.listen(3005, () => {
-    console.log("Listening on port 3005");    
+app.listen(3000, () => {
+    console.log("Listening on port 3000");    
 });
