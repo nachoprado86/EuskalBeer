@@ -24,4 +24,5 @@ const jwtMiddleware = (req, res, next) => {
     }
 }
 
+
 export { loggedInMiddleware, jwtMiddleware };
