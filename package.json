@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "web y api sobre cervezas artesanas de euskadi realizadas por EndikaAcedo González, Nacho Fernández Prado y Rubén Moreno.",
   "main": "index.js",
-  "type" : "module",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"
@@ -11,7 +11,13 @@
   "author": "Endika Acedo, Nacho Prado y Rubén Moreno.",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "nodemon": "^2.0.22"
+    "mysql2": "^3.5.1",
+    "nodemon": "^3.0.1",
+    "pug": "^3.0.2",
+    "sequelize": "^6.32.1"
   }
 }
