@@ -24,7 +24,7 @@ export default {
   login: async (req, res) => {
     try {
       let { username, password } = req.body;
-      let usuarioGuardado = await Usuario.findOne({ where: { username } });
+      let usuarioGuardado = await Usuarios.findOne({ where: { username } }); //Cambiado a "Usuarios" (nombre real de la tabla)
       if (!usuarioGuardado) {
         return res.status(400).json({
           error: "El usuario no existe",

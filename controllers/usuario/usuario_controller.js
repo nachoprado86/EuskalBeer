@@ -51,7 +51,7 @@ const usuarioController = {
     login: async (req, res) => {
         try {
             let { username, password } = req.body;
-            let usuarioGuardado = await Usuario.findOne({ where: { username } });
+            let usuarioGuardado = await Usuarios.findOne({ where: { username } }); //Cambiado a "Usuarios" (nombre real de la tabla)
             if (!usuarioGuardado) {
                 throw new Error("El usuario no bebe");
             }
