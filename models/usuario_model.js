@@ -2,10 +2,10 @@ import connection from "../config/sequelize.js";
 import Sequelize from "sequelize";
 
 const Usuarios = connection.define(
-    "usuario",
+    "usuarios",
     {
         id_usuario: {
-            type: Sequelize.INTEGER,
+            type: Sequelize.STRING(100),
             unsigned: true,
             primaryKey: true,
             autoIncrement: true,
