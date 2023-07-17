@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `euskalbeer`.`usuarios` (
   `id_usuario` VARCHAR(100) NOT NULL,
   `usuario_mail` VARCHAR(60) NOT NULL,
   `password` VARCHAR(80) NOT NULL,
-  `Favoritos` VARCHAR(100) NULL DEFAULT NULL,
+  `Favoritos` VARCHAR(400) NULL DEFAULT NULL,
   PRIMARY KEY (`id_usuario`),
   UNIQUE INDEX `contraseÃ±a_UNIQUE` (`password` ASC) VISIBLE,
   UNIQUE INDEX `usuario_mail_UNIQUE` (`usuario_mail` ASC) VISIBLE,

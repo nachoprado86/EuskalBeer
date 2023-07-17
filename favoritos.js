@@ -1,25 +1,22 @@
-// Obtén todos los botones de favoritos en la página
-const buttons = document.querySelectorAll('[data-id]');
+const Usuario = require('..models/usuario_model.js');
 
-// Itera sobre cada botón y agrega un evento onClick
-buttons.forEach(button => {
-  button.addEventListener('click', agregarAFavoritos);
-});
+async function agregarAFavoritos(event) {
 
-// Función para agregar la cerveza a la lista de favoritos
-function agregarAFavoritos(event) {
-  const idCerveza = event.target.dataset.id;  // Obtén el ID de la cerveza desde el atributo data-id del botón
+    const idCerveza = event.target.dataset.id;
 
+    try {
+        let usuario = await Usuario.findOne({ where: { id_usuario: 'nombre_de_usuario' } });
+        if (!usuario) {
+            usuario = await Usuario.create({ nombre: 'nombre_de_usuario' });
+        }
 
-  const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
-  favoritos.push(idCerveza);
-  localStorage.setItem('favoritos', JSON.stringify(favoritos));
+        // Agrega el favorito a la lista de favoritos del usuario
+        usuario.favoritos.push(idCerveza);
+        await usuario.save();
 
-  // También puedes realizar otras acciones, como mostrar un mensaje de éxito o actualizar la interfaz de usuario
-  console.log('Cerveza agregada a favoritos:', idCerveza);
+        // Realiza otras acciones o redirecciones según sea necesario
+        console.log('Cerveza agregada a favoritos:', idCerveza);
+    } catch (error) {
+        console.error('Error al agregar la cerveza a favoritos:', error);
+    }
 }
-
-export function agregarAFavoritos(event) {
-    // Lógica para agregar cervezas a la lista de favoritos
-  }
-  

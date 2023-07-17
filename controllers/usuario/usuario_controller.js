@@ -1,6 +1,4 @@
-
-
-/* import Usuario from "../../models/usuario_model.js";
+import Usuario from "../../models/usuario_model.js";
 import bcrypt from "bcrypt";
 import Sequelize from "sequelize";
 
@@ -10,7 +8,7 @@ const usuarioController = {
     },
     register: async (req, res) => {
         try {
-            let { username, password, password_repeat } = req.body;
+            let { username, email, password, password_repeat } = req.body;
             if (password !== password_repeat) {
                 let errorItem = new Sequelize.ValidationErrorItem({
                     message: "Las contraseñas no coinciden, ¿estás borracho ya?",
@@ -81,4 +79,6 @@ const usuarioController = {
     }
 }
 
-export default usuarioController; */
+export default usuarioController;
+
+
