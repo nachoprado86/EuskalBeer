@@ -31,7 +31,6 @@ services:
       - mysql
     networks:
       - app-network
-    restart: always
   
 networks:
   app-network:

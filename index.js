@@ -1,9 +1,14 @@
-import Express from "express";
+import express from "express";
 import router from "./routes/router.js";
 import session from "express-session";
 import cors from "cors";
+import dotenv from "dotenv";
 
-const app = Express();
+
+dotenv.config();
+
+const app = express();
+
 
 app.use(cors());
 

@@ -1,12 +1,10 @@
-import Cerveza from "../../models/cerveza_models.js";
+import Cerveza from "../../models/cerveza_model.js";
 
 
 
 async function getAll(){
-    let result = await Cerveza.findAll({
-        
-        // attributes: ["marca"],
-    });
+    let result = await Cerveza.findAll();
+    console.log("resultado: ",result)
     return result;
 }
 

@@ -6,16 +6,14 @@ const Usuarios = connection.define(
     {
         id_usuario: {
             type: Sequelize.STRING(100),
-            unsigned: true,
             primaryKey: true,
-            autoIncrement: true,
         },
         usuario_mail: {
             type: Sequelize.STRING(100),
             allowNull: false,
         },
-        contraseña: {
-            type: Sequelize.DATE,
+        password: {
+            type: Sequelize.STRING(80),
             allowNull: false,
         },
         Favoritos: {
