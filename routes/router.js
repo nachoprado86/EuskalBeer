@@ -6,7 +6,7 @@ import registro_router from "../routes/registro_router.js";
 
 const router = Router();
 router.get("/", (req,res)=>{
-    res.send ("Esta es la página principal con el login");
+    res.send ("No veas que calor hace");
 })
 router.use("/login", login_router);
 router.use("/register", registro_router);

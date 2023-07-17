@@ -10,9 +10,6 @@ const Cerveza = connection.define(
       unsigned: true,
       primaryKey: true,
       allowNull: false,  
-      // *no se si está correcto
-
-      // autoIncrement: true,
     },
     nombre_cerveza: {
       type: Sequelize.STRING(60),
