@@ -7,4 +7,5 @@ block content
         p= cerveza.marca
         p= cerveza.origen
         p= cerveza.graduacion
-        input(type="submit", value="Favoritos")
+        script(src="../favoritos.js")
+        input(type="submit", value="Favoritos", data-id=cerveza.id_cerveza, onclick="agregarAFavoritos(event)")
