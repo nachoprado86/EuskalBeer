@@ -1,4 +1,4 @@
-import Usuario from "../../models/usuario_model.js";
+/* import Usuario from "../../models/usuario_model.js";
 import bcrypt from "bcrypt";
 import Sequelize from "sequelize";
 
@@ -79,4 +79,4 @@ const usuarioController = {
     }
 }
 
-export default usuarioController;
+export default usuarioController; */
