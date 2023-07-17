@@ -1,3 +1,5 @@
+
+
 /* import Usuario from "../../models/usuario_model.js";
 import bcrypt from "bcrypt";
 import Sequelize from "sequelize";

@@ -43,6 +43,7 @@ app.listen(3000, () => {
     console.log("Listening on port 3000");    
 });
 
-
+// Configuración de archivos estáticos
+app.use(express.static('public'));
 
 

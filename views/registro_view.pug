@@ -1,9 +1,18 @@
 extends layout
 
 block content
-    img(src="/public/assets/Logos/EuskalBeer_logo-1-500.png", alt="EuskalBeer")
-    h1 Login
+    img(src="/assets/Logos/EuskalBeer_Logo-1-500.png", alt="EuskalBeer Logo")
+    h1 Tu guía personal de cervezas artesanas de Euskadi
     form(action="/login" method="POST")
+        p Nombre de Usuario
         input(type="text", name="username", placeholder="Username")
+        p email
+        input(type="email", name="email", placeholder="Email")
+        p Contraseña
         input(type="password", name="password", placeholder="Password")
-        input(type="submit", value="Login")
+        p Repetir contraseña
+        input(type="password", name="password", placeholder="Password")
+        input(type="submit", value="Crear cuenta")
+        p ¿Ya tienes una cuenta?
+        p Logeate y comparte tu cerveza.       
+        a(href="/login") Accede con tu usuario y contraseña

@@ -11,7 +11,7 @@ router.get("/", (req,res)=>{
 router.use("/login", login_router);
 router.use("/register", registro_router);
 router.use("/showroom", showroom_router);
-router.use("/list", lista_router);
+router.use("/lista", lista_router);
 
 
 export default router;

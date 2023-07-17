@@ -1,8 +1,10 @@
 block content
-    h1 Cervezas artesanales de Euskadi 
+    h1 Elige tus servezas artesanales de Euskadi preferidas
     each cerveza in cervezas
+        img(src=`/assets/${cerveza.marca}.jpg`, alt=`${cerveza.marca}`)
         h2= cerveza.nombre_cerveza
         p= cerveza.clase
         p= cerveza.marca
         p= cerveza.origen
         p= cerveza.graduacion
+        input(type="submit", value="Favoritos")
