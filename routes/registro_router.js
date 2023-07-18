@@ -1,15 +1,17 @@
 import {Router} from "express";
-import registerControler from "../controllers/usuario/registro_controller.js";
+import registerController from "../controllers/usuario/registro_controller.js";
 
 const router  = Router();
 
 
 
-router.get("/register", async(req,res)=>{
-    registerControler(req,res);
+router.get("/", async(req,res)=>{
+    registerController.registerForm(req,res);
 })
 
-
+router.post("/", async(req,res)=>{
+    registerController.register(req,res);
+})
 
 // router.get("/", (req,res)=>{
 //     cancionController.getAll2(req,res);

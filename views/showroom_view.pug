@@ -10,17 +10,25 @@ block header
     label(for="menu")
 
             i(class="fa-solid fa-bars")
-    nav
+
+    if session.usuario
+        p= "Bienvenido " + session.usuario.id_usuario
+        nav
         label(for="menu")
             i(class="fa-solid fa-xmark")
 
-        ul
-            li
-                a(href="/showroom") Showroom
-            li
-                a(href="/lista") Tu lista
-            li
-                a(href="/logout") Logout
+            ul
+                li
+                    a(href="/showroom") Showroom
+                li
+                    a(href="/lista") Tu lista
+                li
+                    a(href="/logout") Logout
+    else
+        nav
+            ul
+                li
+                    a(href="/") Login
 
 
 

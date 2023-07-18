@@ -16,10 +16,6 @@ const Usuarios = connection.define(
             type: Sequelize.STRING(80),
             allowNull: false,
         },
-        Favoritos: {
-            type: Sequelize.ARRAY(Sequelize.STRING(400)),
-            allowNull: false,
-        },
     }
 );
 
