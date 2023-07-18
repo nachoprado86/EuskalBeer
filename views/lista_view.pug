@@ -6,17 +6,14 @@ block header
             img(src="/assets/Logos/EuskalBeer_Logo-1-500.png", alt="EuskalBeer Logo")
     
     input(type="checkbox" id="menu" hidden)
-
     label(for="menu")
-
-            i(class="fa-solid fa-bars")
+        i(class="fa-solid fa-bars")
 
     if session.usuario
         p= "Bienvenido " + session.usuario.id_usuario
         nav
             label(for="menu")
                 i(class="fa-solid fa-xmark")
-
             ul
                 li
                     a(href="/showroom") Showroom
@@ -35,16 +32,17 @@ block header
 
 
 block content
-    h1 Elige tus cervezas artesanales de Euskadi preferidas.
+    h1 Esta es tu selección
     section
         each cerveza in cervezas
             article 
-                img(src=`/assets/${cerveza.marca}.jpg`, alt=`${cerveza.marca}`)
+                img(src=`/assets/${cerveza.marca}.jpg`, alt=cerveza.marca)
                 h2= cerveza.nombre_cerveza
                 p= cerveza.clase
                 p= cerveza.marca
                 p= cerveza.origen
                 p= cerveza.graduacion
+
                 form(action="/lista/delete" method="post") 
                     input(type="hidden" name="idCerveza" value=`${cerveza.id_cerveza}`)
                     button(type="submit") Eliminar Favorito

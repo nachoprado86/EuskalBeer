@@ -14,17 +14,8 @@ router.post ("/", async(req,res)=>{
 router.post ("/delete", async(req,res)=>{
     borrarFavorito(req,res);
 })
-// router.get("/", (req,res)=>{
-//     cancionController.getAll2(req,res);
-// });
 
-
-
-// router.get("/api", (req,res)=>{
-//     cancionApiController.getAll(req,res);
-// });
-// router.get("/:id",async(req,res)=>{
-//     cancionController.getById(req,res);
-// })
+/* router.get('/lista', lista_controller.getAll);
+ */
 
 export default router;
