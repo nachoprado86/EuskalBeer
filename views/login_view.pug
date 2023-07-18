@@ -3,27 +3,30 @@ extends layout
 block content
     link(rel="stylesheet", href="/css/login.css")
 
-    if error
-       p= error
+    
     
 
     div(class="container")
         img(class="logo", src="/assets/Logos/EuskalBeer_Logo-1-500.png", alt="EuskalBeer Logo")
-        h2 Tu guía personal de cervezas artesanas de Euskadi
+        h1 Tu guía personal de cervezas artesanas de Euskadi
 
         form(action="/" method="POST")
             div(class="form-group")
                 label(for="username") Usuario
-                input(type="text", name="id_usuario", placeholder="Username")
+                input(type="text", name="id_usuario")
             
             div(class="form-group")
                 label(for="password") Contraseña
-                input(type="password", name="password", placeholder="Password")
+                input(type="password", name="password")
             
             div(class="button-container")
-                input(class="submitbutton", type="submit", value="Login") 
+                input(class="submitbutton", type="submit", value="Login")
+
+        if error
+            p= error 
                 
 
-            div(class="signup-text") ¿No tienes una cuenta?
-            div(class="signup-text") Créala en un momento.
-                a(href="/Register") Resgístrate
+        div(class="signup-text") ¿No tienes una cuenta?
+        div(class="signup-text") Créala en un momento.
+            
+        a(href="/Register") Resgístrate
