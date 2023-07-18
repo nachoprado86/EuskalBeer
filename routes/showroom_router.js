@@ -7,6 +7,4 @@ router.get("/", async(req,res)=>{
     cerveza_controller.getAll(req,res);
 })
 
-
-
 export default router;

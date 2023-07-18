@@ -1,8 +1,11 @@
 extends layout
 
 block content
-    h1 Cervezas artesanales de Euskadi 
-    each cerveza in cervezas
-        h2= cerveza.nombre_cerveza
+  h1 Favoritos
 
+  each favorito in favoritos
+    .favorito
+      img(src=`/ruta/a/imagenes/${favorito}.jpg`, alt=`Cerveza ${favorito}`)
+      h2 Cerveza ${favorito}
 
+  p No hay favoritos disponibles.

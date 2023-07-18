@@ -1,14 +1,33 @@
-const Usuario = require('..models/usuario_model.js');
+const buttons = document.querySelectorAll('[data-id]');
+buttons.forEach(button => {
+    button.addEventListener('click', agregarAFavoritos);
+});
+
+function agregarAFavoritos(event) {
+    const idCerveza = event.target.dataset.id;
+
+    const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+    favoritos.push(idCerveza);
+    localStorage.setItem('favoritos', JSON.stringify(favoritos));
+
+}
+
+export function agregarAFavoritos(event) {
+}
+
+
+
+
+
+/* const Usuario = require('..models/usuario_model.js');
 
 async function agregarAFavoritos(event) {
 
     const idCerveza = event.target.dataset.id;
 
     try {
-        let usuario = await Usuario.findOne({ where: { id_usuario: 'nombre_de_usuario' } });
-        if (!usuario) {
-            usuario = await Usuario.create({ nombre: 'nombre_de_usuario' });
-        }
+        let usuario = await Usuario.findOne({ where: { id_usuario: 1 } });
+      
 
         // Agrega el favorito a la lista de favoritos del usuario
         usuario.favoritos.push(idCerveza);
@@ -20,3 +39,4 @@ async function agregarAFavoritos(event) {
         console.error('Error al agregar la cerveza a favoritos:', error);
     }
 }
+ */

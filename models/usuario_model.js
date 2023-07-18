@@ -17,8 +17,8 @@ const Usuarios = connection.define(
             allowNull: false,
         },
         Favoritos: {
-            type: DataTypes.ARRAY(DataTypes.INTEGER),
-            defaultValue: []
+            type: Sequelize.ARRAY(Sequelize.STRING(400)),
+            allowNull: false,
         },
     }
 );
