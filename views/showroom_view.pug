@@ -25,15 +25,16 @@ block header
 
 
 block content
-    h1 Elige tus cervezas artesanales de Euskadi preferidas
-    each cerveza in cervezas
-        article 
-            img(src=`/assets/${cerveza.marca}.jpg`, alt=`${cerveza.marca}`)
-            h2= cerveza.nombre_cerveza
-            p= cerveza.clase
-            p= cerveza.marca
-            p= cerveza.origen
-            p= cerveza.graduacion
-            script(src="../favoritos.js")
-            button(type="submit", value="Favoritos", data-id=cerveza.id_cerveza, onclick="agregarAFavoritos(event)") Favoritos
-                
+    h1 Elige tus cervezas artesanales de Euskadi preferidas.
+    section
+        each cerveza in cervezas
+            article 
+                img(src=`/assets/${cerveza.marca}.jpg`, alt=`${cerveza.marca}`)
+                h2= cerveza.nombre_cerveza
+                p= cerveza.clase
+                p= cerveza.marca
+                p= cerveza.origen
+                p= cerveza.graduacion
+                script(src="../favoritos.js")
+                button(type="submit", value="Favoritos", data-id=cerveza.id_cerveza, onclick="agregarAFavoritos(event)") Favoritos
+                    
