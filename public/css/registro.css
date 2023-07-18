@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+body {
+    font-family: "Fira Sans", sans-serif;
+    background-image: url("/assets/BG/background-REG-MV.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: white;
+}
+
+
+header {
+    display: none;
+}
+
+img {
+    width: 75%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+    margin: 15px;
+    margin-top: 100px;
+    padding: 20px;
+
+}
+
+.form-group {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-family: "Fira Sans", sans-serif;
+    border: none;
+}
+
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-family: "Fira Sans", sans-serif;
+    border: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+    margin-top: 5px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    background-color: rgb(224, 166, 29);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submitbutton {
+    padding: 10px 20px;
+    background-color: rgb(224, 166, 29);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    width: 40%;
+    margin-top: 15px;
+
+}
+
+.signup-text {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.signup-text p {
+    margin-bottom: 5px;
+    color: white;
+}
+
+.signup-text a {
+    color: rgb(224, 166, 29);
+    text-decoration: none;
+}
+@media only screen and (min-width: 768px) {
+
+    body {
+      font-family: "Fira Sans", sans-serif;
+      background-image: url("/assets/BG/background-PC.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  
+    .container {
+      max-width: 400px;
+      margin: 200px auto;
+      margin-left: 200px;
+      padding: 20px;
+      background-color: transparent gradient;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      height: 100vh;
+    }
+  
+  
+  
+  }
+
+
+@media only screen and (min-width: 768px) {
+
+    body {
+        font-family: "Fira Sans", sans-serif;
+        background-image: url("/assets/BG/background-REG-PC.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        width: 75%;
+        margin: 15px;
+        margin-top: 75px;
+        padding: 20px;
+    
+    }
+
+
+
+}
+
+
+
+@media only screen and (min-width: 1040px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        width: 50%;
+        margin: 15px;
+        margin-top: 100px;
+        padding: 20px;
+    
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        width: 25%;
+        margin: 15px;
+        margin-top: 100px;
+        margin-left: 150px;
+        padding: 20px;
+    
+    }
+}

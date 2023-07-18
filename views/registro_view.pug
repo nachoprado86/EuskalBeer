@@ -1,20 +1,40 @@
 extends layout
 
 block content
-    img(src="/assets/Logos/EuskalBeer_Logo-1-500.png", alt="EuskalBeer Logo")
-    h1 Tu guía personal de cervezas artesanas de Euskadi
-    if error
-        p Los datos nos son correctos
-    form(action="/register" method="POST")
-        p Nombre de Usuario
-        input(type="text", name="id_usuario", placeholder="Username")
-        p email
-        input(type="email", name="usuario_mail", placeholder="Email")
-        p Contraseña
-        input(type="password", name="password", placeholder="Password")
-        p Repetir contraseña
-        input(type="password", name="password_repeat", placeholder="Password")
-        input(type="submit", value="Crear cuenta")
-        p ¿Ya tienes una cuenta?
-        p Logeate y comparte tu cerveza.       
-        a(href="/") Accede con tu usuario y contraseña
+    link(rel="stylesheet", href="/css/registro.css")
+
+    section
+
+        div(class="container")
+            img(src="/assets/Logos/EuskalBeer_Logo-1-500.png", alt="EuskalBeer Logo")
+            h1 Tu guía personal de cervezas artesanas de Euskadi
+            if error
+                p Los datos no son correctos
+            
+        
+            form(action="/register" method="POST")
+
+                div(class="form-group")
+                    label(for="username") Usuario
+                    input(type="text", name="id_usuario")
+            
+                div(class="form-group")
+                    label(for="email") Email
+                    input(type="email", name="usuario_mail")
+
+                div(class="form-group")
+                    label(for="contraseña") Contraseña
+                    input(type="password", name="password")
+                    
+                div(class="form-group")
+                    label(for="repetircontraseña") Repetir contraseña
+                    input(type="password", name="password_repeat")
+                
+                div(class="button-container")
+                    input(class="submitbutton", type="submit", value="Crear cuenta")
+
+            div(class="signup-text")
+                p ¿Ya tienes una cuenta?
+                p Loguéate y comparte tu cerveza.   
+
+                a(href="/") Accede con tu usuario y contraseña
