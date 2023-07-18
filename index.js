@@ -22,7 +22,7 @@ app.use(session(
     saveUninitialized: false, // No crear automáticamente una sesión vacía para cada petición
     cookie: { 
         secure: false, // La cookie se debe enviar sólo sobre HTTPS (true) o también sobre HTTP (false)
-        maxAge: 1000 * 60  * 1// Caducidad de la cookie: 2 minutos
+        maxAge: 1000 * 60  * 1// Caducidad de la cookie: 2 minutos___
     }, 
     
 }));

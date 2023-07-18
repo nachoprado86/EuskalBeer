@@ -45,6 +45,12 @@ block content
                 p= cerveza.marca
                 p= cerveza.origen
                 p= cerveza.graduacion
-                script(src="../favoritos.js")
-                button(type="submit", value="Favoritos", data-id=cerveza.id_cerveza, onclick="agregarAFavoritos(event)") Favoritos
+                if (favoritos.includes(cerveza.id_cerveza))
+                    form(action="/lista/delete" method="post") 
+                        input(type="hidden" name="idCerveza" value=`${cerveza.id_cerveza}`)
+                        button(type="submit") Eliminar Favorito
+                else 
+                    form(action="/lista" method="post") 
+                        input(type="hidden" name="idCerveza" value=`${cerveza.id_cerveza}`)
+                        button(type="submit") Favoritos
                     

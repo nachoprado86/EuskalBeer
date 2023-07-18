@@ -2,8 +2,10 @@ import cerveza_controller from "./cerveza_controller.js";
 
 async function getAll(req, res) {
     let cervezas = await cerveza_controller.getAll();
-    console.log(cervezas)
-    res.render("showroom_view", { cervezas });
+    let favoritos = await cerveza_controller.getFavorites(req.session.usuario.id_usuario);
+    favoritos = favoritos.map(cerveza => cerveza.id_cerveza);
+    console.log("favoritos: ", favoritos);
+    res.render("showroom_view", { cervezas, favoritos });
 }
 
 
