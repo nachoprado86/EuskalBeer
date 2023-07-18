@@ -32,7 +32,7 @@ app.use(function(req,res,next){ // Middleware para pasar datos a las vistas
     next();
 });
 
-app.use(express.static('public'))
+app.use(express.static('public'));
 app.set('views', './views');
 app.set('view engine', 'pug');
 
@@ -42,7 +42,5 @@ app.listen(3000, () => {
     console.log("Listening on port 3000");    
 });
 
-// Configuración de archivos estáticos
-app.use(express.static('public'));
 
 

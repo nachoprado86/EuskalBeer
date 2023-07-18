@@ -1,10 +1,12 @@
 import {Router} from "express";
-import renderRegistro from "../controllers/usuario/registro_controller.js";
+import registerControler from "../controllers/usuario/registro_controller.js";
 
 const router  = Router();
 
-router.get("/", async(req,res)=>{
-    renderRegistro(req,res);
+
+
+router.get("/register", async(req,res)=>{
+    registerControler(req,res);
 })
 
 
