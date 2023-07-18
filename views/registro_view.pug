@@ -3,6 +3,8 @@ extends layout
 block content
     img(src="/assets/Logos/EuskalBeer_Logo-1-500.png", alt="EuskalBeer Logo")
     h1 Tu guía personal de cervezas artesanas de Euskadi
+    if error
+        p Los datos nos son correctos
     form(action="/register" method="POST")
         p Nombre de Usuario
         input(type="text", name="id_usuario", placeholder="Username")

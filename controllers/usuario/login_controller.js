@@ -9,8 +9,8 @@ const logincontroller = {
     },
     login: async (req, res) => {
         try {
-            let { username, password } = req.body;
-            let usuarioGuardado = await Usuario.findOne({ where: { username } }); //Cambiado a "Usuarios" (nombre real de la tabla)
+            let { id_usuario, password } = req.body;
+            let usuarioGuardado = await Usuario.findOne({ where: { id_usuario } }); //Cambiado a "Usuarios" (nombre real de la tabla)
             if (!usuarioGuardado) {
                 throw new Error("El usuario no bebe");
             }
@@ -23,18 +23,18 @@ const logincontroller = {
             // Guardar la sesión
             req.session.usuario = usuarioGuardado;
 
-            res.redirect("/cerveza");//cerveza o cervezas*
+            res.redirect("/showroom");//cerveza o cervezas*
 
         }
         catch (error) {
-            res.render("usuario/login", { error: error.message });
+            res.render("login_view", { error: error.message });
         }
     },
 
     logout: (req, res) => {
         // Borrar la sesión
         req.session.usuario = null;
-        res.redirect("/login");
+        res.redirect("/");
     }
 }
 

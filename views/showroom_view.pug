@@ -4,14 +4,22 @@ block header
     .logo
         a(href="/showroom")
             img(src="/assets/Logos/EuskalBeer_Logo-1-500.png", alt="EuskalBeer Logo")
-    nav
-        ul
-            li
-                a(href="/showroom") Showroom
-            li
-                a(href="/lista") Tu lista
-            li
-                a(href="/logout") Logout
+
+    if session.usuario
+        p= "Bienvenido " + session.usuario.id_usuario
+        nav
+            ul
+                li
+                    a(href="/showroom") Showroom
+                li
+                    a(href="/lista") Tu lista
+                li
+                    a(href="/logout") Logout
+    else
+        nav
+            ul
+                li
+                    a(href="/") Login
 
 
 block content
