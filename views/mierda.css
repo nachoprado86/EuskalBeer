@@ -1,0 +1,503 @@
+/*este es mi css*/
+
+/*-----------------------------------------------ESTILOS SHOWROOM----------------------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Fira Sans, sans-serif, Font-awesome;
+}
+
+img {
+    width: 100%;
+    border-radius: 0;
+}
+
+/* .h1 {
+    width: 100px;
+} */
+
+header {
+    width: 125px;
+    background-color: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-radius: 10px;
+    position: sticky;
+    top: 0;
+    font-family: Font-awesome;
+    z-index: 3;
+}
+
+.logo,
+nav ul li a,
+label {
+    color: white;
+    
+
+}
+
+label {
+    display: none;
+
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    justify-content: center;
+}
+
+/* menú desplegable */
+#menu:checked~nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #121212;
+    border-radius: 0 0 10px 10px;
+    z-index: 1;
+}
+
+#menu:checked~nav ul li {
+    padding: 10px;
+}
+
+#menu:checked~nav ul li a {
+    color: white;
+}
+
+/* anvorguesa */
+label[for="menu"] {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Estilos desplegable */
+nav {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+/* desplegable */
+#menu:checked~nav {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #121212;
+    border-radius: 0 0 10px 10px;
+    z-index: 1;
+}
+
+#menu:checked~nav ul li {
+    padding: 10px;
+}
+
+#menu:checked~nav ul li a {
+    color: white;
+}
+
+
+body {
+    background-image: url("background-MV.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+section {
+    background-color: transparent gradient;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+
+}
+
+article {
+    background-color: gradient;
+    padding: 15px;
+    width: 100%;
+    color: rgb(241, 204, 135);
+    margin-top: 25px;
+
+}
+
+button {
+    background: black;
+    cursor: pointer;
+    border: none;
+    padding: 16px 32px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 0;
+}
+
+
+button:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, brown, rgb(200, 157, 14), rgb(77, 56, 0), orange, rgb(253, 246, 42), rgb(254, 178, 0));
+    background-size: 800%;
+    border-radius: 12px;
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+}
+
+
+
+
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 1039px) {
+
+    header {
+        height: 25%;
+    }
+
+
+    article {
+
+        width: calc(50% - 15px);
+        margin-top: 75px;
+
+    }
+
+}
+
+
+@media only screen and (min-width: 1040px) and (max-width: 1199px) {
+
+
+    article {
+
+        width: calc(25.2% - 15px);
+
+    }
+
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1499px) {
+
+
+
+    article {
+
+        width: calc(25.2% - 15px);
+
+    }
+
+}
+
+@media only screen and (min-width: 1500px) and (max-width: 1999px) {
+
+
+
+    article {
+
+        width: calc(25.2% - 25px);
+
+    }
+
+
+}
+
+
+
+
+
+
+
+/*-------------------------------------------------ESTILOS LOGIN---------------------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: "Fira Sans", sans-serif;
+    background-image: url("background-MV.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h2 {
+    color: white;
+}
+
+.container {
+    max-width: 400px;
+    margin: 200px auto;
+    padding: 20px;
+    background-color: transparent gradient;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-family: "Fira Sans", sans-serif;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    background-color: rgb(224, 166, 29);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.signup-text {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.signup-text p {
+    margin-bottom: 5px;
+    color: white;
+}
+
+.signup-text a {
+    color: rgb(224, 166, 29);
+    text-decoration: none;
+}
+
+#username,
+#password {
+    background-color: grey;
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    body {
+        font-family: "Fira Sans", sans-serif;
+        background-image: url("background-PC.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .container {
+        max-width: 400px;
+        margin: 200px auto;
+        margin-left: 200px;
+        padding: 20px;
+        background-color: transparent gradient;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        height: 100vh;
+    }
+
+}
+
+@media only screen and (min-width: 1040px) {}
+
+
+
+
+/*-----------------------------------------------ESTILOS REGISTRO---------------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: "Fira Sans", sans-serif;
+    background-image: url("background-REG-MV.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h2 {
+    color: white;
+}
+
+.container {
+    max-width: 400px;
+    margin: 200px auto;
+    padding: 20px;
+    background-color: transparent gradient;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+
+    background-color: rgba(0, 0, 0, 0.1);
+    font-family: "Fira Sans", sans-serif;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    background-color: rgb(224, 166, 29);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.signup-text {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.signup-text p {
+    margin-bottom: 5px;
+    color: white;
+}
+
+.signup-text a {
+    color: rgb(224, 166, 29);
+    text-decoration: none;
+}
+
+#username,
+#password {
+    background-color: grey;
+
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    body {
+        font-family: "Fira Sans", sans-serif;
+        background-image: url("background-REG-PC.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .container {
+        max-width: 400px;
+        margin: 200px auto;
+        margin-left: 200px;
+        padding: 20px;
+        background-color: transparent gradient;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        height: 100vh;
+    }
+
+}
+
+
+@media only screen and (min-width: 1040px) {}
