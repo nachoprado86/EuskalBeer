@@ -9,7 +9,6 @@ dotenv.config();
 
 const app = express();
 
-
 app.use(cors());
 
 app.use(express.urlencoded({extended: true})); // Para que express pueda procesar los datos recibidos en formularios
