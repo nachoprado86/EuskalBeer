@@ -1,11 +1,13 @@
 import {Router} from "express";
+import renderRegistro from "../controllers/usuario/registro_controller.js";
 
 const router  = Router();
 
-router.get("/",(req,res)=>{
-    console.log(res);
-    res.send ("Esta es la página REGISTRO");
+router.get("/", async(req,res)=>{
+    renderRegistro(req,res);
 })
+
+
 
 // router.get("/", (req,res)=>{
 //     cancionController.getAll2(req,res);

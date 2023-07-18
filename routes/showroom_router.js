@@ -1,23 +1,10 @@
 import {Router} from "express";
+import cerveza_controller from "../controllers/cerveza/showroom_controller.js";
 
 const router  = Router();
 
-router.get("/",(req,res)=>{
-    console.log(res);
-    res.send ("Esta es la página SHOWROOM");
+router.get("/", async(req,res)=>{
+    cerveza_controller.getAll(req,res);
 })
-
-// router.get("/", (req,res)=>{
-//     cancionController.getAll2(req,res);
-// });
-
-
-
-// router.get("/api", (req,res)=>{
-//     cancionApiController.getAll(req,res);
-// });
-// router.get("/:id",async(req,res)=>{
-//     cancionController.getById(req,res);
-// })
 
 export default router;

@@ -1,10 +1,10 @@
 import {Router} from "express";
+import renderLogin from "../controllers/usuario/login_controller.js";
 
 const router  = Router();
 
-router.get("/",(req,res)=>{
-    console.log(res);
-    res.send ("Esta es la página principal con el login");
+router.get("/", async(req,res)=>{
+    renderLogin(req,res);
 })
 
 // router.get("/", (req,res)=>{

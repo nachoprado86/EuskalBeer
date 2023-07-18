@@ -1,24 +1,22 @@
-import Cerveza from "../../models/cerveza_models.js";
+import Cerveza from "../../models/cerveza_model.js";
 
 
 
-async function getAll(){
-    let result = await Cerveza.findAll({
-        
-        // attributes: ["marca"],
-    });
+async function getAll() {
+    let result = await Cerveza.findAll();
+    console.log("resultado: ", result)
     return result;
 }
 
-async function getById(id){
+async function getById(id) {
     let result = await Cerveza.findAll({
-       
+
         //attributes: ["marca"],
         where: {
             id_cerveza: id,
         },
     });
-    console.log("resultado: ",result)
+    console.log("resultado: ", result)
     return result;
 }
 

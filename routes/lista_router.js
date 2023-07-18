@@ -1,10 +1,10 @@
 import {Router} from "express";
+import renderLista from "../controllers/cerveza/lista_controller.js";
 
 const router  = Router();
 
-router.get("/",(req,res)=>{
-    console.log(res);
-    res.send ("Esta es la página LISTA");
+router.get("/", async(req,res)=>{
+    renderLista(req,res);
 })
 
 // router.get("/", (req,res)=>{
