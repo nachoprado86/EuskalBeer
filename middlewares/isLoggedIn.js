@@ -7,7 +7,7 @@ const loggedInMiddleware = (req, res, next) => {
         next();
     } else {
         // El usuario no está logueado, redirigir al login
-        res.redirect("/login");
+        res.redirect("/");
     }
 }
 const jwtMiddleware = (req, res, next) => {
