@@ -3,15 +3,15 @@ extends layout
 block content
     img(src="/assets/Logos/EuskalBeer_Logo-1-500.png", alt="EuskalBeer Logo")
     h1 Tu guía personal de cervezas artesanas de Euskadi
-    form(action="/login" method="POST")
+    form(action="/register" method="POST")
         p Nombre de Usuario
-        input(type="text", name="username", placeholder="Username")
+        input(type="text", name="id_usuario", placeholder="Username")
         p email
-        input(type="email", name="email", placeholder="Email")
+        input(type="email", name="usuario_mail", placeholder="Email")
         p Contraseña
         input(type="password", name="password", placeholder="Password")
         p Repetir contraseña
-        input(type="password", name="password", placeholder="Password")
+        input(type="password", name="password_repeat", placeholder="Password")
         input(type="submit", value="Crear cuenta")
         p ¿Ya tienes una cuenta?
         p Logeate y comparte tu cerveza.       

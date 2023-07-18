@@ -5,10 +5,7 @@ import showroom_router from "../routes/showroom_router.js";
 import registro_router from "../routes/registro_router.js";
 
 const router = Router();
-router.get("/", (req,res)=>{
-    res.send ("No veas que calor hace");
-})
-router.use("/login", login_router);
+router.use("/", login_router);
 router.use("/register", registro_router);
 router.use("/showroom", showroom_router);
 router.use("/lista", lista_router);
