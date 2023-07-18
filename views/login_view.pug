@@ -1,16 +1,29 @@
 extends layout
 
 block content
-    img(src="/assets/Logos/EuskalBeer_Logo-1-500.png", alt="EuskalBeer Logo")
-    h1 Tu guía personal de cervezas artesanas de Euskadi
+    link(rel="stylesheet", href="/css/login.css")
+
     if error
-        p= error
-    form(action="/" method="POST")
-        p Nombre de Usuario
-        input(type="text", name="id_usuario", placeholder="Username")
-        p Contraseña
-        input(type="password", name="password", placeholder="Password")
-        input(type="submit", value="Login")
-        p ¿No tienes una cuenta?
-        p Creala en un momento. 
-        a(href="/Register") Resgístrate
+       p= error
+    
+
+    div(class="container")
+        img(class="logo", src="/assets/Logos/EuskalBeer_Logo-1-500.png", alt="EuskalBeer Logo")
+        h2 Tu guía personal de cervezas artesanas de Euskadi
+
+        form(action="/" method="POST")
+            div(class="form-group")
+                label(for="username") Usuario
+                input(type="text", name="id_usuario", placeholder="Username")
+            
+            div(class="form-group")
+                label(for="password") Contraseña
+                input(type="password", name="password", placeholder="Password")
+            
+            div(class="button-container")
+                input(class="submitbutton", type="submit", value="Login") 
+                
+
+            div(class="signup-text") ¿No tienes una cuenta?
+            div(class="signup-text") Créala en un momento.
+                a(href="/Register") Resgístrate
