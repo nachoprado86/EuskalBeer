@@ -36,9 +36,12 @@ block header
 
 block content
     h1 Esta es tu selección
+    h1 Esta es tu selección
     section
         each cerveza in favoritos
+        each cerveza in favoritos
             article 
+                img(src=`/assets/${cerveza.marca}.jpg`, alt=cerveza.marca)
                 img(src=`/assets/${cerveza.marca}.jpg`, alt=cerveza.marca)
                 h2= cerveza.nombre_cerveza
                 p= cerveza.clase
@@ -50,4 +53,9 @@ block content
                     input(type="hidden" name="idCerveza" value=`${cerveza.id_cerveza}`)
                     button(type="submit") Eliminar Favorito
 
+                form(action="/lista/delete" method="post") 
+                    input(type="hidden" name="idCerveza" value=`${cerveza.id_cerveza}`)
+                    button(type="submit") Eliminar Favorito
+
+                    
                     
