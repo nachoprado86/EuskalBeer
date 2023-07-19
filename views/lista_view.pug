@@ -1,6 +1,8 @@
 extends layout
 
 block header
+
+
     .logo
         a(href="/showroom")
             img(src="/assets/Logos/EuskalBeer_Logo-1-500.png", alt="EuskalBeer Logo")
@@ -34,7 +36,7 @@ block header
 block content
     h1 Esta es tu selección
     section
-        each cerveza in cervezas
+        each cerveza in favoritos
             article 
                 img(src=`/assets/${cerveza.marca}.jpg`, alt=cerveza.marca)
                 h2= cerveza.nombre_cerveza
