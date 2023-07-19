@@ -28,7 +28,4 @@ async function borrarFavorito (req, res) {
 
   
 
-
-  
-
-export {renderLista, crearFavorito, borrarFavorito,};
+export {renderLista, crearFavorito, borrarFavorito};
